@@ -30,7 +30,7 @@ router.get("/post/:id", (req, res) => {
     .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-        res.render("singlePost", { post });
+        res.render("", { post });
       } else {
         res.status(404).end();
       }
@@ -53,7 +53,7 @@ router.get("/signup", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("createUser");
+  res.render("signup");
 });
 
 module.exports = router;
