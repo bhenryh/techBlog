@@ -23,11 +23,13 @@ router.post("/", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
+  console.log("this is the correct user route")
   User.findOne({
     where: {
       name: req.body.name,
     },
   }).then((dbUserData) => {
+    console.log(dbUserData)
     if (!dbUserData) {
       res.status(400).json({ message: "No user with that username." });
       return;

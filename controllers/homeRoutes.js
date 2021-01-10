@@ -53,7 +53,7 @@ router.get("/signup", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("createUser");
+  res.render("signup");
 });
 
 module.exports = router;
